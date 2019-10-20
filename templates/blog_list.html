@@ -9,6 +9,8 @@
                     <a href="/blog?id={{ entry.id }}">{{ entry.title }}</a>
                 </h2>
                 <p>{{ entry.body }}</p>
+                <p>Written by <a href="./blog?owner_id={{entry.owner_id}}">{{entry.owner.username}}</a></p>
+
             </li>
         {% endfor %}
     </ul>

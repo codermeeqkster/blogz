@@ -3,23 +3,65 @@
     <head>
         <title>{{title}}</title>
         <style>
-        h1 {text-align: center;}
         .error {
-    color: crimson;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    line-height: 1rem;
-}
+            color: crimson;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            line-height: 1rem;
+        }
+        nav {
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 2rem;
+         }
+         a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        h1 {
+            padding-bottom: 2rem;
+            text-align: center;
+            color: red;
+        }
+        input {
+            width: 95%;
+            margin: auto;
+            padding: 0.6rem;
+            border: 1px solid #6E7081;
+            font-size: 1rem;
+            margin-bottom: .9rem;
+        }
+
+        textarea {
+            width: 97%;
+            border: 1px solid #6E7081;
+            white-space: pre-wrap;
+        }
+
+        body {
+            padding-top: 2rem;
+            height: 100%;
+            margin: 0% 20% 5% 20%;
+            line-height: 1.5rem;
+        }
+
         </style>
     </head>
 <body>
     <main>
         <nav>
+            <a href='/'>Home</a>
             <a href='/blog'>Main Blog Page</a>
             <a href='/newpost'>Add a Blog Entry</a>
+            <a href='/logout'>Logout</a>
+            <a href='/login'>Login</a>
         </nav>
 
-        <div class="container">
+        <div>
                
             {% block content %}
             {% endblock %}
